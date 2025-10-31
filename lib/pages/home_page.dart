@@ -192,12 +192,6 @@ class _HomePageState extends State<HomePage> {
                             itemCount: _suggestions.length,
                             itemBuilder: (context, index) {
                               final item = _suggestions[index];
-                              final name = item['display'] ??
-                                  item['city'] ??
-                                  item['state'] ??
-                                  item['country'] ??
-                                  'Unknown';
-
                               return ListTile(
                                 title: Text(item['display'] ?? 'Unknown'),
                                 subtitle: Text(
